@@ -1,0 +1,116 @@
+{
+  "cats": [
+    {
+      "id": "1",
+      "name": "Мурзик",
+      "breed": "Персидский",
+      "age": 2,
+      "image": "https://placecats.com/400/400",
+      "description": "Спокойный и ласковый кот с длинной пушистой шерстью",
+      "personality": ["спокойный", "ласковый", "любит спать"],
+      "adoptable": true,
+      "likes": 342,
+      "story": "Найден на улице, прошел полную акклиматизацию и готов к жизни в уютном доме",
+      "energy": 2,
+      "playfulness": 2,
+      "friendliness": 4,
+      "galleryImages": [
+        "https://placecats.com/400/400",
+        "https://placecats.com/400/400",
+        "https://placecats.com/400/400"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Царица Мяу",
+      "breed": "Сиамский",
+      "age": 1,
+      "image": "https://placecats.com/400/400",
+      "description": "Энергичная и разговорчивая красавица с голубыми глазами",
+      "personality": ["игривая", "умная", "любит общаться"],
+      "adoptable": true,
+      "likes": 567,
+      "story": "Родилась в приюте, полна энергии и готова к активной жизни",
+      "energy": 4,
+      "playfulness": 5,
+      "friendliness": 3,
+      "galleryImages": [
+        "https://placecats.com/400/400",
+        "https://placecats.com/400/400"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Леопард",
+      "breed": "Бенгальский",
+      "age": 3,
+      "image": "https://placecats.com/400/400",
+      "description": "Дикий леопард с пятнистым окрасом и острым умом",
+      "personality": ["независимый", "умный", "любит охотиться"],
+      "adoptable": true,
+      "likes": 456,
+      "story": "Красивый бенгал с атлетичным телосложением, ищет активного хозяина",
+      "energy": 5,
+      "playfulness": 4,
+      "friendliness": 2,
+      "galleryImages": [
+        "https://placecats.com/400/400",
+        "https://placecats.com/400/400"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Снежок",
+      "breed": "Ragdoll",
+      "age": 4,
+      "image": "https://placecats.com/400/400",
+      "description": "Нежный кремовый красавец с голубыми глазами",
+      "personality": ["послушный", "ласковый", "спокойный"],
+      "adoptable": false,
+      "likes": 789,
+      "story": "Идеальный семейный кот, скоро появится помет котят",
+      "energy": 2,
+      "playfulness": 3,
+      "friendliness": 5,
+      "galleryImages": [
+        "https://placecats.com/400/400"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Пушок",
+      "breed": "Мейн-кун",
+      "age": 5,
+      "image": "https://placecats.com/400/400",
+      "description": "Огромный и пушистый гигант с добрым характером",
+      "personality": ["дружелюбный", "игривый", "нежный"],
+      "adoptable": true,
+      "likes": 623,
+      "story": "Большой мальчик, который думает, что он маленький котенок",
+      "energy": 3,
+      "playfulness": 4,
+      "friendliness": 5,
+      "galleryImages": [
+        "https://placecats.com/400/400"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Лунка",
+      "breed": "Черная кошка",
+      "age": 3,
+      "image": "https://placecats.com/400/400",
+      "description": "Мистическая черная кошечка с волшебным взглядом",
+      "personality": ["загадочная", "умная", "независимая"],
+      "adoptable": true,
+      "likes": 345,
+      "story": "Ищет спокойного дома где ее цена будет оценена",
+      "energy": 2,
+      "playfulness": 2,
+      "friendliness": 3,
+      "galleryImages": [
+        "https://placecats.com/400/400"
+      ]
+    }
+  ]
+}

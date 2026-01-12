@@ -1,65 +1,141 @@
-import Image from "next/image";
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CatWonderland - Все о Котиках 🐱',
+  description: 'Добро пожаловать в мир котиков! Галерея, информация и новости о наших пушистых друзьях',
+  openGraph: {
+    title: 'CatWonderland - Все о Котиках 🐱',
+    description: 'Добро пожаловать в мир котиков! Галерея, информация и новости о наших пушистых друзьях',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <Header />
+      <main>
+        {/* Hero Section */}
+        <section className="relative min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50 flex items-center justify-center overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 -left-1/2 w-full h-full bg-gradient-to-r from-orange-200 to-transparent opacity-30 blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 -right-1/2 w-full h-full bg-gradient-to-l from-pink-200 to-transparent opacity-30 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+
+          <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            {/* Main Title with animation */}
+            <div className="mb-6 animate-fade-in-up">
+              <div className="text-6xl sm:text-7xl md:text-8xl mb-4 inline-block">🐱</div>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              Добро пожаловать в мир котиков
+            </h1>
+
+            <p className="text-xl sm:text-2xl text-gray-700 mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              Откройте для себя самых очаровательных, забавных и нежных котиков ✨
+            </p>
+
+            <Link
+              href="/gallery"
+              className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all transform hover:scale-105 animate-fade-in-up shadow-lg"
+              style={{ animationDelay: '0.6s' }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+              Откройте нашу галерею →
+            </Link>
+
+            {/* Feature cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-3">📸</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Галерея</h3>
+                <p className="text-gray-600">Более 100 фото наших котиков в высоком качестве</p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-3">❤️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Усыновление</h3>
+                <p className="text-gray-600">Помогите котикам найти новый дом и семью</p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-3">📖</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Истории</h3>
+                <p className="text-gray-600">Узнайте истории каждого котика и его пути</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="bg-gradient-to-r from-orange-500 to-pink-500 py-12">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
+              <div>
+                <div className="text-4xl font-bold mb-2">6+</div>
+                <p className="text-orange-100">Котиков в нашем приюте</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">1000+</div>
+                <p className="text-orange-100">Лайков от посетителей</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">100%</div>
+                <p className="text-orange-100">Счастливых семей</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Готовы встретить своего пушистого друга?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Просмотрите нашу коллекцию и найдите идеального котика для вашей семьи
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/gallery"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-colors"
+              >
+                Посмотреть галерею
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-lg transition-colors"
+              >
+                Связаться с нами
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+      <Footer />
+
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+      `}</style>
+    </>
   );
 }

@@ -1,0 +1,116 @@
+{
+  "cats": [
+    {
+      "id": "1",
+      "name": "Мурзик",
+      "breed": "Персидский",
+      "age": 2,
+      "image": "https://images.unsplash.com/photo-1574158622147-e410c4352e0f?w=400&h=400&fit=crop",
+      "description": "Спокойный и ласковый кот с длинной пушистой шерстью",
+      "personality": ["спокойный", "ласковый", "любит спать"],
+      "adoptable": true,
+      "likes": 342,
+      "story": "Найден на улице, прошел полную акклиматизацию и готов к жизни в уютном доме",
+      "energy": 2,
+      "playfulness": 2,
+      "friendliness": 4,
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1574158622147-e410c4352e0f?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1542652694d3b2310c41e3e5dcc3266aadb649fea?w=400&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Царица Мяу",
+      "breed": "Сиамский",
+      "age": 1,
+      "image": "https://images.unsplash.com/photo-1513360371669-4a8bb994e580?w=400&h=400&fit=crop",
+      "description": "Энергичная и разговорчивая красавица с голубыми глазами",
+      "personality": ["игривая", "умная", "любит общаться"],
+      "adoptable": true,
+      "likes": 567,
+      "story": "Родилась в приюте, полна энергии и готова к активной жизни",
+      "energy": 4,
+      "playfulness": 5,
+      "friendliness": 3,
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1513360371669-4a8bb994e580?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1548681528-6a846cf17f12?w=400&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Леопард",
+      "breed": "Бенгальский",
+      "age": 3,
+      "image": "https://images.unsplash.com/photo-1506941433945-99a2aa7dd338?w=400&h=400&fit=crop",
+      "description": "Дикий леопард с пятнистым окрасом и острым умом",
+      "personality": ["независимый", "умный", "любит охотиться"],
+      "adoptable": true,
+      "likes": 456,
+      "story": "Красивый бенгал с атлетичным телосложением, ищет активного хозяина",
+      "energy": 5,
+      "playfulness": 4,
+      "friendliness": 2,
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1506941433945-99a2aa7dd338?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1574913154511-62663c91e80c?w=400&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Снежок",
+      "breed": "Ragdoll",
+      "age": 4,
+      "image": "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=400&h=400&fit=crop",
+      "description": "Нежный кремовый красавец с голубыми глазами",
+      "personality": ["послушный", "ласковый", "спокойный"],
+      "adoptable": false,
+      "likes": 789,
+      "story": "Идеальный семейный кот, скоро появится помет котят",
+      "energy": 2,
+      "playfulness": 3,
+      "friendliness": 5,
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=400&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Пушок",
+      "breed": "Мейн-кун",
+      "age": 5,
+      "image": "https://images.unsplash.com/photo-1567270671170-fdc10a5bf831?w=400&h=400&fit=crop",
+      "description": "Огромный и пушистый гигант с добрым характером",
+      "personality": ["дружелюбный", "игривый", "нежный"],
+      "adoptable": true,
+      "likes": 623,
+      "story": "Большой мальчик, который думает, что он маленький котенок",
+      "energy": 3,
+      "playfulness": 4,
+      "friendliness": 5,
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1567270671170-fdc10a5bf831?w=400&h=400&fit=crop"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Лунка",
+      "breed": "Черная кошка",
+      "age": 3,
+      "image": "https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=400&h=400&fit=crop",
+      "description": "Мистическая черная кошечка с волшебным взглядом",
+      "personality": ["загадочная", "умная", "независимая"],
+      "adoptable": true,
+      "likes": 345,
+      "story": "Ищет спокойного дома где ее цена будет оценена",
+      "energy": 2,
+      "playfulness": 2,
+      "friendliness": 3,
+      "galleryImages": [
+        "https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=400&h=400&fit=crop"
+      ]
+    }
+  ]
+}
