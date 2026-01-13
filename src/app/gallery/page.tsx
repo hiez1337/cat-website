@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CatGallery } from '@/components/CatGallery';
-import { useCats } from '@/hooks/useCats';
+import { fetchCats } from '@/hooks/useCats';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function GalleryPage() {
-  const cats = await useCats();
+  const cats = await fetchCats();
 
   return (
     <>

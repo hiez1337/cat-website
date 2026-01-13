@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -20,26 +22,26 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Навигация</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/" className="text-gray-400 hover:text-orange-400 transition-colors">
-                  Главная
-                </a>
-              </li>
-              <li>
-                <a href="/gallery" className="text-gray-400 hover:text-orange-400 transition-colors">
-                  Галерея
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-400 hover:text-orange-400 transition-colors">
-                  О нас
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-400 hover:text-orange-400 transition-colors">
-                  Контакты
-                </a>
-              </li>
+                <li>
+                  <Link href="/" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    Главная
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/gallery" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    Галерея
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    О нас
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    Контакты
+                  </Link>
+                </li>
             </ul>
           </div>
 

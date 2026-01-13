@@ -1,26 +1,16 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
+import { getCatsServer } from '@/services/catsService';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
-    // Fetch from the public JSON file
-    const response = await fetch(new URL('/data/cats.json', request.url));
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch cats data');
-    }
-
-    const catsData = await response.json();
-    
-    return NextResponse.json(catsData, {
+    const cats = getCatsServer();
+    return NextResponse.json(cats, {
       headers: {
         'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
       },
     });
   } catch (error) {
     console.error('Error fetching cats:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch cats' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to fetch cats' }, { status: 500 });
   }
 }

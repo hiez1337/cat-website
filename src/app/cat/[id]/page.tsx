@@ -1,18 +1,15 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { getCatById, useCats, getCatsSync } from '@/hooks/useCats';
+import { getCatById, fetchCats, getCatsSync } from '@/hooks/useCats';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const cat = await getCatById(id);
 
@@ -48,7 +45,7 @@ interface CatPageProps {
 export default async function CatPage({ params }: CatPageProps) {
   const { id } = await params;
   const cat = await getCatById(id);
-  const allCats = await useCats();
+  const allCats = await fetchCats();
 
   if (!cat) {
     return (

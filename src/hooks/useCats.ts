@@ -1,36 +1,32 @@
 import { Cat } from '@/types/cat';
-import catsData from '@/data/cats.json';
+import { fetchCatsClient, getCatsServer, getCatByIdServer } from '@/services/catsService';
 
-export async function useCats(): Promise<Cat[]> {
+export async function fetchCats(): Promise<Cat[]> {
+  // Server-side: return import-time data
+  if (typeof window === 'undefined') {
+    return getCatsServer();
+  }
+
+  // Client-side: fetch from public file with revalidation
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
   try {
-    // For server-side, use the imported JSON directly
-    if (typeof window === 'undefined') {
-      return catsData.cats as Cat[];
-    }
-
-    // For client-side, fetch from the public file
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/data/cats.json`, {
-      next: { revalidate: 60 }, // Cache for 60 seconds
-    });
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch cats');
-    }
-
-    const data = await response.json();
-    return data.cats as Cat[];
-  } catch (error) {
-    console.error('Error loading cats:', error);
-    return catsData.cats as Cat[];
+    return await fetchCatsClient(baseUrl);
+  } catch (err) {
+    console.error('Error loading cats (client):', err);
+    // Fallback to an empty array to avoid throwing in UI code
+    return [];
   }
 }
 
 export async function getCatById(id: string): Promise<Cat | null> {
-  const cats = await useCats();
-  return cats.find(cat => cat.id === id) || null;
+  // prefer server-side fast lookup when possible
+  if (typeof window === 'undefined') {
+    return getCatByIdServer(id);
+  }
+  const cats = await fetchCats();
+  return cats.find((c) => c.id === id) ?? null;
 }
 
 export function getCatsSync(): Cat[] {
-  return catsData.cats;
+  return getCatsServer();
 }

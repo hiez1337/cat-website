@@ -3,7 +3,7 @@
 import { Cat } from '@/types/cat';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface CatCardProps {
   cat: Cat;
@@ -12,25 +12,26 @@ interface CatCardProps {
 
 export function CatCard({ cat, onLike }: CatCardProps) {
   const [likes, setLikes] = useState(cat.likes);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState<boolean>(() => {
+    try {
+      const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+      return Array.isArray(favorites) && favorites.includes(cat.id);
+    } catch {
+      return false;
+    }
+  });
   const [sparkles, setSparkles] = useState<{ id: number; x: number; y: number }[]>([]);
 
-  // Load favorite status from localStorage
-  useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    setIsFavorite(favorites.includes(cat.id));
-  }, [cat.id]);
-
   const handleLike = () => {
-    setLikes(likes + 1);
-    
+    setLikes(l => l + 1);
+
     // Create sparkle effect on like
     const newSparkle = {
       id: Date.now(),
       x: Math.random() * 100,
       y: Math.random() * 100,
     };
-    setSparkles([...sparkles, newSparkle]);
+    setSparkles(s => [...s, newSparkle]);
     setTimeout(() => {
       setSparkles(s => s.filter(sp => sp.id !== newSparkle.id));
     }, 600);
